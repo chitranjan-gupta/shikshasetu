@@ -23,7 +23,7 @@
     "page": "/src/option/index.html",
     "open_in_tab": true
   },
-  "sidePanel": {
+  "side_panel": {
     "default_path": "/src/sidepanel/index.html"
   },
   "permissions": [
