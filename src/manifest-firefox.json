@@ -1,0 +1,52 @@
+{
+  "manifest_version": 2,
+  "name": "ShikshaSetu: Clipper, Autofiller and AI",
+  "version": "1.0.0",
+  "description": "ShikshaSetu: Clipper, Autofiller and AI",
+  "browser_action": {
+    "default_icon": {
+      "16": "/assets/icons/icon16.png",
+      "32": "/assets/icons/icon32.png",
+      "48": "/assets/icons/icon48.png",
+      "128": "/assets/icons/icon128.png"
+    },
+    "default_popup": "/src/popup/index.html",
+    "default_title": "ShikshaSetu"
+  },
+  "icons": {
+    "16": "/assets/icons/icon16.png",
+    "32": "/assets/icons/icon32.png",
+    "48": "/assets/icons/icon48.png",
+    "128": "/assets/icons/icon128.png"
+  },
+  "options_ui": {
+    "page": "/src/option/index.html",
+    "open_in_tab": true
+  },
+  "sidebar_action": {
+    "default_title": "ShikshaSetu: AI",
+    "default_panel": "/src/sidepanel/index.html",
+    "default_icon": "/assets/icons/icon128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "contextMenus",
+    "storage",
+    "webNavigation",
+    "notifications",
+    "cookies",
+    "unlimitedStorage",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": ["background-script.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-script.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
